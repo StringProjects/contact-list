@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { SectionList, StyleSheet, Text, View, Image } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
-import App from './App';
+// import { createStackNavigator } from 'react-navigation';
 import ContactDetail from './ContactDetail';
 
-const Route = createStackNavigator({
-  Profile: { screen: ContactDetail },
-});
+// const Route = createStackNavigator({
+//   Profile: { screen: ContactDetail },
+// });
 
 
 export default class ContactList extends Component {
-  static navigationOptions = {
-    title: 'Profile',
-  };
+  // static navigationOptions = {
+  //   title: 'Profile',
+  // };
   render() {
-    const { navigate } = this.props.navigation;
+    // const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <SectionList
@@ -107,9 +106,9 @@ export default class ContactList extends Component {
           renderItem={({item}) =>
           <View 
             style={styles.containerItem}
-            onPress={() =>
-              navigate('Profile', { name: 'Jane' })
-            }
+            // onPress={() =>
+            //   navigate('Profile', { name: 'Jane' })
+            // }
           >
              <Image
               style={styles.itemImage}
