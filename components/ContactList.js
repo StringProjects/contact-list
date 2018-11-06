@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import { SectionList, StyleSheet, Text, View, Image } from 'react-native';
-// import { createStackNavigator } from 'react-navigation';
-import ContactDetail from './ContactDetail';
-
-// const Route = createStackNavigator({
-//   Profile: { screen: ContactDetail },
-// });
-
+import router from './router';
 
 export default class ContactList extends Component {
-  // static navigationOptions = {
-  //   title: 'Profile',
-  // };
+  onPress = () => {
+    this.props.navigation.navigate('ContactDetail');
+  }; 
   render() {
-    // const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <SectionList
@@ -28,7 +21,7 @@ export default class ContactList extends Component {
               ]
             },
             {
-              title: 'C', 
+              title: 'C',
               data: [
                 {
                   img: 'https://media.wmagazine.com/photos/5a6276541f0ccf26968b8269/4:3/w_1536/1316.w.MS.royals.image2.jpg', 

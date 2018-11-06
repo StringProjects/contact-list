@@ -2,10 +2,12 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 
-
 //type Props = {};
 export default class ContactDetail extends Component {
   render() {
+    onLearnMore = (user) => {
+      this.props.navigation.navigate('Details', { ...user });
+    };
     return (
       <Text>
         User
