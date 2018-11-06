@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+
 import { StackNavigator } from 'react-navigation';
 import ContactDetail from './ContactDetail';
 import ContactList from './ContactList';
@@ -6,9 +6,9 @@ import ContactList from './ContactList';
 export const FeedStack = StackNavigator({
   ContactList: {
     screen: ContactList,
-    // navigationOptions: {
-    //   title: 'CONTACTLIST ',
-    // },
+    navigationOptions: {
+      title: 'CONTACTLIST ',
+    },
   },
   ContactDetail: {
     screen: ContactDetail,

@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { SectionList, StyleSheet, Text, View, Image } from 'react-native';
-import router from './router';
+import { SectionList, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default class ContactList extends Component {
-  onPress = () => {
-    this.props.navigation.navigate('ContactDetail');
-  }; 
+ 
   render() {
     return (
       <View style={styles.container}>
@@ -97,18 +94,20 @@ export default class ContactList extends Component {
             },
           ]}
           renderItem={({item}) =>
-          <View 
+
+          <TouchableOpacity
             style={styles.containerItem}
-            // onPress={() =>
-            //   navigate('Profile', { name: 'Jane' })
-            // }
+            onPress = {(item) => {
+              console.log('Hola!!')
+              this.props.navigation.navigate('ContactDetail', item);
+            }}
           >
              <Image
               style={styles.itemImage}
               source={{uri: item.img}}
           />
             <Text style={styles.item}>{item.name}</Text>
-          </View>
+          </TouchableOpacity>
           }
           renderSectionHeader={({section}) => 
             <Text style={styles.sectionHeader}>{section.title}</Text>
