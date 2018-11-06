@@ -7,7 +7,6 @@ import ContactDetail from './ContactDetail';
 //   Profile: { screen: ContactDetail },
 // });
 
-
 export default class ContactList extends Component {
   // static navigationOptions = {
   //   title: 'Profile',
