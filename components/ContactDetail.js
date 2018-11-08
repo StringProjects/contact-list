@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
+import {Platform, StyleSheet, Text, Image, View} from 'react-native';
 
 
 //type Props = {};
 export default class ContactDetail extends Component {
   render() {
+    const {img , name , tlf} = this.props.navigation.state.params;
     return (
+      <View>
+          
+          <Image
+          style={{width: '100%', height: 250}}
+          source={{uri: img}}
+          />
       <Text>
-        User
+        {name}
+        {tlf}
       </Text>
+      </View>
+      
     );
   }
 }
