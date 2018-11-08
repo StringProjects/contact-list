@@ -3,9 +3,6 @@ import { SectionList, StyleSheet, Text, View, Image, TouchableOpacity } from 're
 import { connect } from 'react-redux';
 
 class ContactList extends Component {
- 
-
-
   render() {
     return (
       <View style={styles.container}>
