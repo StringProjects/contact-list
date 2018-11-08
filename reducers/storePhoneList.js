@@ -7,7 +7,7 @@ const initialState = {
       title: 'B', 
       data: [
         {
-          img: 'https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2017%2F04%2Fbrad-pitt-1.jpg%3Fw%3D450&w=700&c=sc&poi=face&q=85', 
+          img: 'https://img.bekiamoda.com/galeria/68000/68256_cv03.jpg', 
           name:'Brad Pitt',
           tlf: "555-7334"
         }
